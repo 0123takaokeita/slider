@@ -40,26 +40,20 @@ target.append(controls);
 //setAttribute(属性名, 属性値)を使ってindexの初期値を設定します。
 main.setAttribute("data-index", "0");
 
-
-// 以下を出力するはずです。今slideJump(1)をしたのでスライドは右にズレてます。
-// したがって、現在のインデックスが0、グレーの箱が現在の要素で、青い箱が次の要素になります。
-// 0
-// <div class="box slider-item bg-secondary"></div>
-// <div class="box slider-item bg-primary"></div>
 function slideJump(steps) {
-    let index = parseInt(main.getAttribute('data-index')); //現在のインデックス
-    let currentElement = sliderItems[index]; //現在のitem
-    index += steps; //　stepsを加算
-    let len = sliderItems.length; //要素の数を取得
+  let index = parseInt(main.getAttribute('data-index')); //現在のインデックス
+  let currentElement = sliderItems[index]; //現在のitem
+  index += steps; //　stepsを加算
+  let len = sliderItems.length; //要素の数を取得
 
-    if(index < 0) index = len + index; // indexが-1のときは末尾に移動。
-    else if(index >= len) index = 0; //indexが最後のitemの場合は0にもどす。
+  if (index < 0) index = len + index; // indexが-1のときは末尾に移動。
+  else if (index >= len) index = 0; //indexが最後のitemの場合は0にもどす。
 
-    let nextElement = sliderItems[index]; //次のitemを表示
-    main.setAttribute('data-index',index.toString());// mainのindexを上書き。
-    
-    console.log(index);
-    console.log(currentElement);
-    console.log(nextElement);
+  let nextElement = sliderItems[index]; //次のitemを表示
+  main.setAttribute('data-index', index.toString());// mainのindexを上書き。
+
+  console.log(index);
+  console.log(currentElement);
+  console.log(nextElement);
 }
 
