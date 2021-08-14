@@ -10,11 +10,11 @@
 }
 
 .deplete-animation{
-  animation: deplete 1s linear forwards;
+  animation: deplete 2s linear forwards;
 }
 
 .expand-animation{
-  animation: deplete 1s linear reverse forwards;
+  animation: deplete 2s linear reverse forwards;
 }
 
 @keyframes  deplete {

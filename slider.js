@@ -52,8 +52,30 @@ function slideJump(steps) {
   let nextElement = sliderItems[index]; //次のitemを表示
   main.setAttribute('data-index', index.toString());// mainのindexを上書き。
 
-  console.log(index);
-  console.log(currentElement);
-  console.log(nextElement);
 }
 
+// 現在の要素、次の要素、rightかleftを受け取って、スライダーを実現します。
+function animateMain(currentElement, nextElement, animationType) {
+  // extraに今の要素を入れます。extraはスライドのエフェクトなので消滅する今の要素を入れます。
+  extra.innerHTML = "";
+  extra.append(currentElement);
+
+  // mainに次の要素を入れます。
+  main.innerHTML = "";
+  main.append(nextElement);
+
+  // mainが出てくるようにexpandのanimationをつけます。
+  // もう一度、上のCSSのアニメーションのコードを確認してみましょう。
+  main.classList.add("expand-animation");
+  extra.classList.add("deplete-animation");
+  
+  if(animationType === "right"){
+      sliderShow.innerHTML = "";
+      // 次のmainを後に入れます。
+      // extraが消えて、mainが登場するアニメーション
+      sliderShow.append(extra);
+      sliderShow.append(main);
+  }
+}
+// 関数の呼び出し
+animateMain(sliderItems[0], sliderItems[1], "right");
