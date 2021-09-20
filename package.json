@@ -1,0 +1,23 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "学習教材　Recursionを学習していく中でのProjectです。 https://recursionist.io/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0123takaokeita/slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0123takaokeita/slider/issues"
+  },
+  "homepage": "https://github.com/0123takaokeita/slider#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+
+}
