@@ -5,6 +5,7 @@
     transition:all 2s linear;
 }
 
+
 /* 不透明度が下がり、長さが短くなるアニメーション */
 .deplete-animation{
     animation: deplete 1s linear forwards;
@@ -15,8 +16,14 @@
     animation: deplete 1s linear reverse forwards;
 }
 
-/* だんだん長さが減り、不透明度が落ちていく */
-@keyframes  deplete {
+/*
+アニメーションの始まりは幅が100%
+透明度が１
+アニメーションの終わりは幅が0%
+透明度が０
+*/
+
+@keyframes deplete {
     0%{
         width: 100%;
         opacity: 1;
